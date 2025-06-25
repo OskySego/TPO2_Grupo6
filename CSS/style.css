@@ -1,0 +1,138 @@
+/* style.css */
+
+/* Importa la fuente Roboto de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset básico y asegurando que html y body ocupen todo el espacio disponible */
+html, body {
+    height: 100%; /* Fundamental para que el centrado vertical funcione */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total de los elementos */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto */
+    background-color: #f0f2f5; /* Un gris claro para el fondo */
+    color: #333; /* Color de texto oscuro para buena legibilidad */
+
+    /* === CENTRADO DEFINITIVO DEL CONTENEDOR PRINCIPAL === */
+    /* No necesitamos flexbox/grid en el body para este método,
+       simplemente lo hacemos el contexto de posicionamiento */
+    position: relative; /* Asegura que los hijos con position: absolute se posicionen respecto al body */
+}
+
+/* Contenedor principal de todo el contenido */
+.container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    width: 95%; /* Ancho responsivo, ocupará el 95% del espacio disponible */
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+    padding: 30px; /* Relleno interno para dar espacio alrededor del contenido */
+    border-radius: 12px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto flotante */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    overflow-x: hidden; /* Evita barras de desplazamiento horizontales innecesarias */
+
+    /* === PROPIEDADES CLAVE PARA CENTRAR EN PANTALLA === */
+    position: absolute; /* Permite posicionamiento exacto */
+    top: 50%; /* Mueve la parte superior del contenedor al 50% de la altura del body */
+    left: 50%; /* Mueve la parte izquierda del contenedor al 50% del ancho del body */
+    transform: translate(-50%, -50%); /* Ajusta el contenedor hacia atrás por la mitad de su propio tamaño,
+                                        centrándolo perfectamente. */
+    /* ================================================= */
+}
+
+/* Estilos para encabezados */
+h1, h2, h3 {
+    color: #2c5282; /* Un azul oscuro */
+    margin-bottom: 15px;
+    font-weight: 700; /* Negrita */
+    border-bottom: 2px solid #a7d9f7; /* Subrayado decorativo */
+    padding-bottom: 5px;
+    text-align: center; /* Centra el texto dentro de los encabezados */
+}
+
+h1 {
+    font-size: 2.25rem; /* Tamaño de fuente grande */
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 1.75rem; /* Tamaño de fuente medio */
+    margin-top: 25px;
+}
+
+h3 {
+    font-size: 1.25rem; /* Tamaño de fuente para sub-encabezados de lista */
+    margin-top: 20px;
+}
+
+/* Estilos para listas */
+ul {
+    list-style: none; /* Sin viñetas por defecto */
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left; /* Las listas suelen verse mejor alineadas a la izquierda */
+}
+
+ul li {
+    background-color: #e6f2ff; /* Fondo azul claro para elementos de lista */
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-left: 4px solid #3182ce; /* Borde izquierdo azul */
+    border-radius: 6px; /* Esquinas redondeadas */
+    font-size: 1.1rem;
+}
+
+/* Estilos para párrafos */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #555;
+    text-align: center; /* Centra el texto de los párrafos */
+}
+
+/* Estilos para el bloque de código/resultados */
+pre {
+    background-color: #f8f9fa; /* Fondo muy claro */
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto; /* Permite desplazamiento horizontal si el código es muy largo */
+    border: 1px solid #dee2e6; /* Borde suave */
+    text-align: left; /* El contenido preformateado (código) suele ser mejor alineado a la izquierda */
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada para el código */
+    color: #c53030; /* Color rojo para el código */
+    font-size: 0.95rem;
+}
+
+/* Clase para el mensaje importante de la consola */
+.console-message {
+    background-color: #d1ecf1; /* Azul claro */
+    color: #0c5460; /* Azul oscuro para texto */
+    border: 1px solid #bee5eb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center; /* Asegura que el texto dentro de este div esté centrado */
+    font-weight: 600;
+}
+
+/* Estilos para la etiqueta <kbd> para simular teclas */
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    color: #333;
+    display: inline-block;
+    font-family: monospace;
+    font-size: .85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
